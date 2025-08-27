@@ -39,44 +39,31 @@ img{max-width:100%;display:block;background:#eee;border-radius:16px}
 .nav-list a{display:block;padding:.6rem .8rem;border-radius:12px;color:var(--text);text-decoration:none;font-weight:600}
 .nav-list a:hover,.nav-list a:focus{background:var(--brand-100);outline:none}
 
-/* Shared base styles */
-.hero,
-.page-hero {
-  position: relative;
-  color: #fff;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* Hero */
 .hero {
+  position: relative;
   min-height: 72vh;
   display: grid;
   place-items: center;
+  color: #fff;
+  overflow: hidden; /* keeps overlay contained */
 }
 
-/* Page banner */
-.page-hero {
-  padding: 7rem 0 4rem;
-}
-
-/* Overlays for readability */
-.hero::after,
-.page-hero::after {
+/* dark green overlay */
+.hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(11, 36, 20, 0.85); /* dark green overlay */
-  z-index: 0; /* stay behind content */
-}
-
-/* Make sure text sits above overlay */
-.hero-inner,
-.page-hero .container {
-  position: relative;
+  background: rgba(11, 36, 20, 0.85); /* adjust 0.85 → 0.7 for lighter overlay */
   z-index: 1;
 }
+
+/* make sure content sits above overlay */
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
 
 
 /* Buttons */
