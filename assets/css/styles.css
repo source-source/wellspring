@@ -62,18 +62,14 @@ img{max-width:100%;display:block;background:#eee;border-radius:16px}
 .btn-light{background:#fff;color:var(--brand-600)}
 .btn-light:hover{filter:brightness(.96)}
 
-.hero, .banner {
+.hero {
   background-image: var(--bg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative;
-  min-height: 60vh;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.45);
-  /* color: #fff; */
+  align-items: center;
+  min-height: 400px; /* makes sure the section has some height */
 }
 
 /* Cards & grids */
