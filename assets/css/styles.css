@@ -72,9 +72,9 @@ img{max-width:100%;display:block;background:#eee;border-radius:16px}
   padding: 2rem; /* adjust as needed */
 }
 
-/* Specifically style .lead text inside hero/banner */
-.hero .lead,
-.page-hero .lead {
+
+
+.lead {
   color: #fff !important;
   text-align: center;
   margin-top: 1rem;
