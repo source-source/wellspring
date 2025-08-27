@@ -78,8 +78,11 @@ img{max-width:100%;display:block;background:#eee;border-radius:16px}
   color: #fff !important;
   text-align: center;
   margin-top: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   font-size: 1.2rem; /* optional: make it stand out */
+}
+.badge-hours{
+margin-top: 3rem;
 }
 
 
