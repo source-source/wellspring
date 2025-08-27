@@ -85,6 +85,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+  const setBG = (el, url, gradient) => {
+    el.style.backgroundImage = `${gradient}, url('${url}')`;
+    el.style.backgroundSize = 'cover';
+    el.style.backgroundPosition = 'center';
+    el.style.backgroundRepeat = 'no-repeat';
+  };
+
+  document.querySelectorAll('.hero[data-bg], .page-hero[data-bg]').forEach(el => {
+    const url = el.getAttribute('data-bg');
+    if (!url) return;
+    const gradient = el.classList.contains('page-hero')
+      ? 'linear-gradient(to bottom right, rgba(30,130,76,.7), rgba(22,103,61,.7))'
+      : 'linear-gradient(to bottom right, rgba(30,130,76,.75), rgba(22,103,61,.75))';
+    setBG(el, url, gradient);
+  });
+});
+
+
+  
   // Appointment form via EmailJS
   const appointmentForm = document.getElementById('appointmentForm');
   const appointmentStatus = document.getElementById('appointmentStatus');
