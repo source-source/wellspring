@@ -39,70 +39,46 @@ img{max-width:100%;display:block;background:#eee;border-radius:16px}
 .nav-list a{display:block;padding:.6rem .8rem;border-radius:12px;color:var(--text);text-decoration:none;font-weight:600}
 .nav-list a:hover,.nav-list a:focus{background:var(--brand-100);outline:none}
 
-/* Hero */
+/* ===== HERO ===== */
 .hero {
-  min-height: 72vh;
+  min-height: 72vh;                 /* ensure it's visible */
   display: grid;
   place-items: center;
   color: #fff;
   position: relative;
 
-  /* ✅ Gradient + background variable */
+  /* gradient + URL from a variable */
   background-image:
     linear-gradient(to bottom right, rgba(30,130,76,.75), rgba(22,103,61,.75)),
-    var(--bg, none);
-
+    url(var(--bg-url));
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+/* optional soft echo of the photo */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: var(--bg, none);
+  background-image: url(var(--bg-url));
   background-size: cover;
   background-position: center;
   opacity: .15;
   pointer-events: none;
 }
 
-.hero-inner {
-  text-align: center;
-  padding: 8vh 0;
-}
+.hero-inner { text-align: center; padding: 8vh 0; }
 
-.hero-cta {
-  display: flex;
-  gap: .8rem;
-  justify-content: center;
-  margin-top: 1rem;
-  flex-wrap: wrap;
-}
-
-.badge-hours {
-  margin-top: 1.2rem;
-  display: inline-block;
-  background: #fff;
-  color: var(--brand-600);
-  padding: .5rem .8rem;
-  border-radius: 999px;
-  box-shadow: var(--shadow);
-  font-weight: 700;
-}
-
-/* Page banner */
+/* ===== PAGE BANNER ===== */
 .page-hero {
   padding: 7rem 0 4rem;
   color: #fff;
   position: relative;
 
- 
   background-image:
     linear-gradient(to bottom right, rgba(30,130,76,.7), rgba(22,103,61,.7)),
-    var(--bg, none);
-
+    url(var(--bg-url));
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
