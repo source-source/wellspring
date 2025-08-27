@@ -64,10 +64,22 @@ img{max-width:100%;display:block;background:#eee;border-radius:16px}
   text-align: center;
 }
 
+ 
+.hero,
+.page-hero {
+  text-align: center;
+  color: #fff;
+  padding: 2rem; /* adjust as needed */
+}
+
+/* Specifically style .lead text inside hero/banner */
 .hero .lead,
 .page-hero .lead {
   color: #fff !important;
+  margin-top: 1rem;
+  font-size: 1.2rem; /* optional: make it stand out */
 }
+
 
 
 /* Buttons */
