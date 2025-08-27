@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>WellSpring Family Clinic</title>
+  <meta name="description" content="WellSpring Family Clinic — caring, modern healthcare for families. Book appointments, explore services, and use our BMI calculator." />
+  <meta name="keywords" content="clinic, family health, general practice, immunizations, telehealth, BMI calculator, appointment" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="WellSpring Family Clinic home">
+        <span class="logo-icon" aria-hidden="true">🌿</span> WellSpring
+      </a>
+      <nav class="nav" aria-label="Primary Navigation">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle Navigation">☰</button>
+        <ul id="primary-menu" class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="bmi.html">BMI</a></li>
+          <li><a href="appointment.html">Appointment</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero" style="--bg:url('assets/images/banner-bmi.jpg')">
+      <div class="container">
+        <h1>BMI Calculator</h1>
+        <p class="lead">Enter your height and weight to estimate your Body Mass Index.</p>
+      </div>
+    </section>
+
+    <section class="container reveal">
+      <form id="bmiForm" class="form card-md" novalidate>
+        <div class="form-row">
+          <label for="height">Height</label>
+          <div class="input-with-select">
+            <input type="number" id="height" name="height" placeholder="e.g., 170" min="50" step="0.1" required aria-describedby="unitHint" />
+            <select id="heightUnit" name="heightUnit" aria-label="Height unit">
+              <option value="cm" selected>cm</option>
+              <option value="m">m</option>
+            </select>
+          </div>
+          <small id="unitHint">You can enter centimeters or meters.</small>
+        </div>
+        <div class="form-row">
+          <label for="weight">Weight (kg)</label>
+          <input type="number" id="weight" name="weight" placeholder="e.g., 65" min="1" step="0.1" required />
+        </div>
+        <button type="submit" class="btn btn-primary">Calculate</button>
+      </form>
+
+      <div id="bmiResult" class="result card-md" role="status" aria-live="polite"></div>
+
+      <div class="bmi-info card-md">
+        <h2>How to interpret your BMI</h2>
+        <ul class="unstyled">
+          <li><strong>&lt; 18.5</strong> — Underweight</li>
+          <li><strong>18.5–24.9</strong> — Normal</li>
+          <li><strong>25–29.9</strong> — Overweight</li>
+          <li><strong>30+</strong> — Obese</li>
+        </ul>
+        <p class="muted">BMI is a screening tool and not a diagnosis. Speak with your clinician for personalized advice.</p>
+      </div>
+    </section>
+  </main>
+<footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>WellSpring Family Clinic</h3>
+        <p>Compassionate care, right in your community.</p>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <ul class="unstyled">
+          <li>Mon–Fri: 8:00am – 6:00pm</li>
+          <li>Sat: 9:00am – 1:00pm</li>
+          <li>Sun & Public Holidays: Closed</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="unstyled">
+          <li><a href="tel:+611300555010">+61 1300 555 010</a></li>
+          <li><a href="mailto:hello@wellspringclinic.au">hello@wellspringclinic.au</a></li>
+          <li>123 Greenway Rd, Melbourne VIC</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="unstyled">
+          <li><a href="appointment.html">Request Appointment</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="bmi.html">BMI Calculator</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> WellSpring Family Clinic. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
