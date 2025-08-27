@@ -75,23 +75,6 @@ img{max-width:100%;display:block;background:#eee;border-radius:16px}
   background: rgba(0, 0, 0, 0.45);
   /* color: #fff; */
 }
-.input-with-select {
-  display: flex;         /* put input + select side by side */
-  align-items: center;
-  gap: 8px;              /* little space between them */
-}
-
-.input-with-select input[type="number"] {
-  flex: 2;               /* takes 2 parts of the space */
-  min-width: 120px;      /* ensure it's not too tiny */
-  padding: 10px;
-}
-
-.input-with-select select {
-  flex: 1;               /* takes 1 part of the space */
-  min-width: 80px;       /* prevent it from being too small */
-  padding: 10px;
-}
 
 /* Cards & grids */
 .card,.card-md{background:var(--surface);border-radius:20px;box-shadow:var(--shadow);padding:1.2rem}
