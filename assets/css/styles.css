@@ -64,6 +64,10 @@ img{max-width:100%;display:block;background:#eee;border-radius:16px}
   text-align: center;
 }
 
+.hero .lead,
+.page-hero .lead {
+  color: #fff !important;
+}
 
 
 /* Buttons */
