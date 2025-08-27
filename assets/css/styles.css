@@ -47,7 +47,7 @@ img{max-width:100%;display:block;background:#eee;border-radius:16px}
   color: #fff;
   position: relative;
 
-  /* Use background-image instead of shorthand */
+  /* ✅ Gradient + background variable */
   background-image:
     linear-gradient(to bottom right, rgba(30,130,76,.75), rgba(22,103,61,.75)),
     var(--bg, none);
@@ -98,6 +98,7 @@ img{max-width:100%;display:block;background:#eee;border-radius:16px}
   color: #fff;
   position: relative;
 
+ 
   background-image:
     linear-gradient(to bottom right, rgba(30,130,76,.7), rgba(22,103,61,.7)),
     var(--bg, none);
@@ -106,7 +107,6 @@ img{max-width:100%;display:block;background:#eee;border-radius:16px}
   background-position: center;
   background-repeat: no-repeat;
 }
-
 
 /* Buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:.8rem 1.1rem;text-decoration:none;font-weight:800;border:2px solid transparent;box-shadow:var(--shadow)}
@@ -117,15 +117,6 @@ img{max-width:100%;display:block;background:#eee;border-radius:16px}
 .btn-light{background:#fff;color:var(--brand-600)}
 .btn-light:hover{filter:brightness(.96)}
 
-.hero {
-  background-image: var(--bg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  justify-content: center;
-  align-items: center;
-  min-height: 400px; /* makes sure the section has some height */
-}
 
 /* Cards & grids */
 .card,.card-md{background:var(--surface);border-radius:20px;box-shadow:var(--shadow);padding:1.2rem}
