@@ -39,77 +39,43 @@ img{max-width:100%;display:block;background:#eee;border-radius:16px}
 .nav-list a{display:block;padding:.6rem .8rem;border-radius:12px;color:var(--text);text-decoration:none;font-weight:600}
 .nav-list a:hover,.nav-list a:focus{background:var(--brand-100);outline:none}
 
+/* Shared base styles */
+.hero,
+.page-hero {
+  position: relative;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /* Hero */
 .hero {
   min-height: 72vh;
   display: grid;
   place-items: center;
-  color: #fff;
-  position: relative;
-
-  /* gradient + background image from variable */
-  background:
-    linear-gradient(to bottom right, rgba(30,130,76,.75), rgba(22,103,61,.75)),
-    url(var(--bg-url));
-  background-size: cover;
-  background-position: center;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url(var(--bg-url));
-  background-size: cover;
-  background-position: center;
-  opacity: .15;
-}
-
-.hero-inner {
-  text-align: center;
-  padding: 8vh 0;
-}
-
-.hero-cta {
-  display: flex;
-  gap: .8rem;
-  justify-content: center;
-  margin-top: 1rem;
-  flex-wrap: wrap;
-}
-
-.badge-hours {
-  margin-top: 1.2rem;
-  display: inline-block;
-  background: #fff;
-  color: var(--brand-600);
-  padding: .5rem .8rem;
-  border-radius: 999px;
-  box-shadow: var(--shadow);
-  font-weight: 700;
 }
 
 /* Page banner */
 .page-hero {
   padding: 7rem 0 4rem;
-  color: #fff;
-  position: relative;
-
-  background:
-    linear-gradient(to bottom right, rgba(30,130,76,.7), rgba(22,103,61,.7)),
-    url(var(--bg-url));
-  background-size: cover;
-  background-position: center;
 }
 
+/* Overlays for readability */
+.hero::after,
 .page-hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url(var(--bg-url));
-  background-size: cover;
-  background-position: center;
-  opacity: .08;
+  background: rgba(11, 36, 20, 0.85); /* dark green overlay */
+  z-index: 0; /* stay behind content */
+}
+
+/* Make sure text sits above overlay */
+.hero-inner,
+.page-hero .container {
+  position: relative;
+  z-index: 1;
 }
 
 
