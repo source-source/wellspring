@@ -22,6 +22,18 @@ body{
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
 }
+
+.animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+.animate.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 img{max-width:100%;display:block;background:#eee;border-radius:16px}
 .container{width:min(1100px,92%);margin-inline:auto}
 .display{font-size:clamp(2rem,4vw,3rem);line-height:1.2;margin:.2em 0}
