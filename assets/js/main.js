@@ -87,19 +87,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-const reveals = document.querySelectorAll('.reveal');
+// Reveal on scroll
+function revealOnScroll() {
+  const reveals = document.querySelectorAll('.reveal');
+  const windowHeight = window.innerHeight;
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('active'); // add class to trigger CSS animation
+  reveals.forEach(el => {
+    const elementTop = el.getBoundingClientRect().top;
+    const revealPoint = 150; // trigger animation 150px before element enters viewport
+
+    if (elementTop < windowHeight - revealPoint) {
+      el.classList.add('active');
     } else {
-      entry.target.classList.remove('active');
+      el.classList.remove('active');
     }
   });
-}, { threshold: 0.1 });
+}
 
-reveals.forEach(el => observer.observe(el));
+// Trigger on scroll
+window.addEventListener('scroll', revealOnScroll);
+
+// Trigger once in case elements are already visible
+revealOnScroll();
 
 
 
