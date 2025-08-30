@@ -87,20 +87,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
- document.addEventListener("DOMContentLoaded", () => {
-  const elements = document.querySelectorAll(".animate");
+const reveals = document.querySelectorAll('.reveal');
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("fade-in");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.2 });
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active'); // add class to trigger CSS animation
+    } else {
+      entry.target.classList.remove('active');
+    }
+  });
+}, { threshold: 0.1 });
 
-  elements.forEach(el => observer.observe(el));
-});
+reveals.forEach(el => observer.observe(el));
+
 
 
   
