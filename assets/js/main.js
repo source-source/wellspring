@@ -102,6 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
   elements.forEach(el => observer.observe(el));
 });
 
+
   
   // Appointment form via EmailJS
   const appointmentForm = document.getElementById('appointmentForm');
