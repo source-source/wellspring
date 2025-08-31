@@ -1,26 +1,25 @@
-# WellSpring Family Clinic Website
+WellSpring Family Clinic website
 
-This is the official website of **WellSpring Family Clinic** created in HTML, CSS, and JavaScript.  
-It has information on clinic, services, booking an appointment, and a BMI calculator.
+This is the official website of WellSpring Family Clinic coded in HTML, CSS and JavaScript.  
+It has clinic, services, appointment and BMI calculator.
 
 ---
 
 ## Pages
-
-- **Home** – Overview of the clinic  
-- **Services** – Details of healthcare services  
-- **BMI Calculator** – Quick health tool  
-- **Appointment** – Online appointment request form  
-- **About** – Clinic and team info  
-- **Contact** – Contact details and opening hours  
+**Home**  Overview of the clinic  
+Services - health care services information  
+BMI Calculator - quick health calculator  
+Appointment Online request for an appointment  
+**About**  Clinic and team info  
+Contact: contact information and office hours  
 
 ---
 
 ## Tech Stack
 
-- HTML5  
-- CSS3 (Responsive Design)  
-- JavaScript (Form validation & interactivity)  
+HTML5  
+CSS3 (Responsive Design)  
+JavaScript (interactivity / validation)  
 
 ---
 
