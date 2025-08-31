@@ -26,10 +26,6 @@ It provides information about the clinic, services, booking appointments, and a 
 
 ## Live Demo
 
-👉 [View Website](https://yourusername.github.io/wellspring/)  
+👉 [View Website](https://source-source.github.io/wellspring/index.html)  
 
----
 
-## License
-
-MIT License
